@@ -1,0 +1,34 @@
+{
+    "id": "InputCollection",
+    "schemaVersion": "1.1.0",
+    "name": "InputCollection",
+    "revision": "1",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "applicant_id",
+            "type": "section",
+            "title": "User ID",
+            "content": [
+                {
+                    "id": "applicant_id",
+                    "type": "string",
+                    "label": "SF Candidate ID",
+                    "readOnly": false,
+                    "value": "${context.response.CanID}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "find_new_hire",
+            "text": "Find New Hire",
+            "decisionType": "positive"
+        }
+    ]
+}

@@ -1,0 +1,195 @@
+{
+    "id": "AcceptWorkplace",
+    "schemaVersion": "1.1.0",
+    "name": "AcceptWorkplace",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "personal_information",
+            "type": "section",
+            "title": "Personal Information",
+            "content": [
+                {
+                    "id": "first_name",
+                    "type": "string",
+                    "label": "First Name",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].fName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "last_name",
+                    "type": "string",
+                    "label": "Last Name",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].lName}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "job_information",
+            "type": "section",
+            "title": "HR Info",
+            "content": [
+                {
+                    "id": "manager_id",
+                    "type": "string",
+                    "label": "Manager ID",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].managerId}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "hr_manager_id",
+                    "type": "string",
+                    "label": "HR Manager ID",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].hrManagerId}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "job_req_id",
+                    "type": "string",
+                    "label": "Job Req ID",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].jobReqId}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "unit_information",
+            "type": "section",
+            "title": "Unit Information",
+            "content": [
+                {
+                    "id": "division",
+                    "type": "string",
+                    "label": "Division",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].division}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "deparment",
+                    "type": "string",
+                    "label": "Department",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].department}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "location",
+                    "type": "string",
+                    "label": "Location",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].location}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "country",
+                    "type": "string",
+                    "label": "Country",
+                    "readOnly": true,
+                    "value": "${context.CInfo.d.results[0].workCountry}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "equipment_needed",
+            "type": "section",
+            "title": "Equipment Needed",
+            "content": [
+                {
+                    "id": "equipment",
+                    "type": "collection",
+                    "title": "Equipment",
+                    "addEnabled": false,
+                    "deleteEnabled": false,
+                    "value": "${context.equipment.EquipmentsInfo}",
+                    "content": [
+                        {
+                            "id": "product_id",
+                            "type": "string",
+                            "label": "Product ID",
+                            "readOnly": true,
+                            "value": "${item.ProductID}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "product_description",
+                            "type": "string",
+                            "label": "Product Description",
+                            "readOnly": true,
+                            "value": "${item.ProdDesc}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "type",
+                            "type": "string",
+                            "label": "Type",
+                            "readOnly": true,
+                            "value": "${item.EquipmentType}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "price",
+                            "type": "float",
+                            "label": "Price",
+                            "readOnly": true,
+                            "value": "${item.Price}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "status",
+                            "type": "string",
+                            "label": "Status",
+                            "readOnly": true,
+                            "value": "${item.Status}",
+                            "constraints": {
+                                "required": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "accept",
+            "text": "Accept Workplace",
+            "decisionType": "positive"
+        }
+    ]
+}
