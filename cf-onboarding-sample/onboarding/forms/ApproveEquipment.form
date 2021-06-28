@@ -132,6 +132,16 @@
                             "constraints": {
                                 "required": false
                             }
+                        },
+                        {
+                            "id": "currency",
+                            "type": "string",
+                            "label": "Currency",
+                            "readOnly": true,
+                            "value": "${item.Currency}",
+                            "constraints": {
+                                "required": false
+                            }
                         }
                     ]
                 }
