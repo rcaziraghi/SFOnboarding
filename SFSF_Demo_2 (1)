@@ -1,0 +1,10 @@
+#Password=<< Existing password/certificate removed on export >>
+#
+#Tue Jun 29 16:00:44 UTC 2021
+URL=https\://apisalesdemo2.successfactors.eu\:443
+Name=SFSF_Demo_2
+ProxyType=Internet
+Type=HTTP
+Authentication=BasicAuthentication
+Description=Test Connection to SFSF
+User=sfadmin@SFPART034714
