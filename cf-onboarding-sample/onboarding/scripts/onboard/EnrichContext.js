@@ -9,7 +9,6 @@
   		equip.Status = "New";
         equip.ExpectedDate = "";
         equip.RequestedLoc = empData.location;
-        
   		//equip.RequestedLoc = "Building 01";
   		//equip.CostCenter = $.context.empData.d.results[0].empInfo.jobInfoNav.results[0].costCenter;
   		EquipInfo.push(equip);

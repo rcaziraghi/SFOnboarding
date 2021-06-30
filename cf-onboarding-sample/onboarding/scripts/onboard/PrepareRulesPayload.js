@@ -17,7 +17,7 @@ var empData = $.context.CInfo.d.results[0];
     }];
     var rulesPayload = {
     	"RuleServiceId": "6bbd196d50c14b918d04c181e78d3a5b",
-    	"RuleServiceVersion": "000002000006000000",
+    	//"RuleServiceVersion": "000002000007000000",
     	"Vocabulary": Vocabulary
     };
   $.context.rulesPayload = rulesPayload;
