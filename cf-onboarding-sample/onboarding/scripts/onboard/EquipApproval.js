@@ -5,13 +5,11 @@
   if (EquipmentInfo.length > 0) {
   	for (var i = 0; i < EquipmentInfo.length; i++) {
   		equip = EquipmentInfo[i];
-        //equip.price = equip.Price;
   		total = total + equip.Price;
   		EquipInfo.push(equip);
   	}
   }else {
   	equip = EquipmentInfo;
-    //equip.price = equip.Price;
   	total = total + equip.Price;
   	EquipInfo.push(equip);
   }

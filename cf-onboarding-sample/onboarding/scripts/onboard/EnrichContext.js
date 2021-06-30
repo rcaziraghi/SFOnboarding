@@ -1,5 +1,5 @@
   var EquipmentInfo = $.context.equipment.EquipmentsInfo.Result[0].EquipmentList;
-  var empData = $.context.CInfo.d.results[0]
+  var empData = $.context.CInfo.d.results[0];
   var EquipInfo = [];
   var equip = {};
   if (EquipmentInfo.length > 0) {
@@ -9,8 +9,6 @@
   		equip.Status = "New";
         equip.ExpectedDate = "";
         equip.RequestedLoc = empData.location;
-  		//equip.RequestedLoc = "Building 01";
-  		//equip.CostCenter = $.context.empData.d.results[0].empInfo.jobInfoNav.results[0].costCenter;
   		EquipInfo.push(equip);
   	}
   }else {
@@ -19,7 +17,6 @@
   	equip.Status = "New";
   	equip.ExpectedDate = "";
     equip.RequestedLoc = empData.location;
-  	//equip.CostCenter = $.context.empData.d.results[0].empInfo.jobInfoNav.results[0].costCenter;
   	EquipInfo.push(equip);
   }
   $.context.equipment.EquipmentsInfo = EquipInfo;

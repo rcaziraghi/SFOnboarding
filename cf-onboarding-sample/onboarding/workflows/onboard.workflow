@@ -56,12 +56,6 @@
 				"fb3c8397-77da-427d-97ef-a19aad769c03": {
 					"name": "Enrich Context"
 				},
-				"ef91a235-aa2c-42f8-9b1a-c3799343ac52": {
-					"name": "Retrieve Input"
-				},
-				"2b0a62dc-4b45-4b63-a97b-2f860bcce996": {
-					"name": "Collect Input"
-				},
 				"f7e6ef2b-84d9-4d9f-9606-f9a7ace8f023": {
 					"name": "Approval Determination"
 				},
@@ -98,12 +92,6 @@
 				},
 				"a8b03abe-f2b3-4b30-bac6-91b4791c3ce8": {
 					"name": "SequenceFlow56"
-				},
-				"8cde9675-e8ac-4379-92f3-5cc90bca0e11": {
-					"name": "SequenceFlow58"
-				},
-				"1ca6abcf-349c-4e32-9222-1a6375bd4a8b": {
-					"name": "SequenceFlow61"
 				},
 				"420adde4-6ce2-461e-9646-9806d1981895": {
 					"name": "SequenceFlow64"
@@ -228,35 +216,6 @@
 			"id": "scripttask6",
 			"name": "Enrich Context"
 		},
-		"ef91a235-aa2c-42f8-9b1a-c3799343ac52": {
-			"classDefinition": "com.sap.bpm.wfs.ServiceTask",
-			"destination": "SFSF_Demo_2",
-			"path": "/odata/v2/OnboardingCandidateInfo?$filter=candidateId eq ${context.response.CanID}",
-			"httpMethod": "GET",
-			"responseVariable": "${context.CInfo}",
-			"id": "servicetask8",
-			"name": "Retrieve Input"
-		},
-		"2b0a62dc-4b45-4b63-a97b-2f860bcce996": {
-			"classDefinition": "com.sap.bpm.wfs.UserTask",
-			"subject": "Input Candidate ID",
-			"description": "Input the new candidate ID for onboarding process.",
-			"priority": "MEDIUM",
-			"isHiddenInLogForParticipant": false,
-			"supportsForward": false,
-			"userInterface": "sapui5://comsapbpmworkflow.comsapbpmwusformplayer/com.sap.bpm.wus.form.player",
-			"recipientUsers": "${info.startedBy}",
-			"formReference": "/forms/InputCollection.form",
-			"userInterfaceParams": [{
-				"key": "formId",
-				"value": "InputCollection"
-			}, {
-				"key": "formRevision",
-				"value": "1"
-			}],
-			"id": "usertask5",
-			"name": "Collect Input"
-		},
 		"f7e6ef2b-84d9-4d9f-9606-f9a7ace8f023": {
 			"classDefinition": "com.sap.bpm.wfs.ScriptTask",
 			"reference": "/scripts/onboard/EquipApproval.js",
@@ -304,7 +263,7 @@
 			"id": "sequenceflow51",
 			"name": "SequenceFlow51",
 			"sourceRef": "5f136fac-3aee-4c23-b9e4-5e4b837f3a16",
-			"targetRef": "2b0a62dc-4b45-4b63-a97b-2f860bcce996"
+			"targetRef": "7ba66efa-4d2e-47ff-bb5e-86e58b871488"
 		},
 		"0a02caf5-b4ab-4386-b05b-291b60cbae8d": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
@@ -333,20 +292,6 @@
 			"name": "SequenceFlow56",
 			"sourceRef": "c3176c60-9c77-43ef-8273-dd6b919ff1db",
 			"targetRef": "a994f5eb-0a71-4d2c-bc67-94bde11a4052"
-		},
-		"8cde9675-e8ac-4379-92f3-5cc90bca0e11": {
-			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
-			"id": "sequenceflow58",
-			"name": "SequenceFlow58",
-			"sourceRef": "ef91a235-aa2c-42f8-9b1a-c3799343ac52",
-			"targetRef": "7ba66efa-4d2e-47ff-bb5e-86e58b871488"
-		},
-		"1ca6abcf-349c-4e32-9222-1a6375bd4a8b": {
-			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
-			"id": "sequenceflow61",
-			"name": "SequenceFlow61",
-			"sourceRef": "2b0a62dc-4b45-4b63-a97b-2f860bcce996",
-			"targetRef": "ef91a235-aa2c-42f8-9b1a-c3799343ac52"
 		},
 		"420adde4-6ce2-461e-9646-9806d1981895": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
@@ -411,10 +356,6 @@
 				"d359f2df-4baa-407b-910e-4e9b0195a37c": {},
 				"8fb9bbcc-6deb-40c1-b663-802a514c2589": {},
 				"daa7020a-20da-449f-8d9d-f530234b05d3": {},
-				"2f1b427f-bba8-4a85-b1f1-adf8d082ea5c": {},
-				"35f975cb-9034-4ac5-a1ad-d3d2a250ad70": {},
-				"f839142e-5cc3-42f2-8f8f-03a7c9e52887": {},
-				"e220eb26-ae8b-4058-86c8-2e45ac5344e2": {},
 				"139aeb6b-9a41-45f4-a73c-132c3bd9dfc3": {},
 				"7239072c-7fed-459c-a2ec-e509d490a47b": {},
 				"d70678a9-656d-4726-99be-4b7bd28cfce4": {},
@@ -433,8 +374,8 @@
 		},
 		"616eec04-9bb6-4d3a-a10e-ab0f4512d369": {
 			"classDefinition": "com.sap.bpm.wfs.ui.StartEventSymbol",
-			"x": -113,
-			"y": -233.50000059604645,
+			"x": 173,
+			"y": -238.50000059604645,
 			"width": 32,
 			"height": 32,
 			"object": "5f136fac-3aee-4c23-b9e4-5e4b837f3a16"
@@ -501,9 +442,9 @@
 		},
 		"dffd02fc-bbf7-472e-9321-8f4fc0b1db41": {
 			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "-81,-217.50000059604645 13.999998807907104,-217.50000059604645",
+			"points": "189,-221.25000029802322 397.4999964237213,-221.25000029802322",
 			"sourceSymbol": "616eec04-9bb6-4d3a-a10e-ab0f4512d369",
-			"targetSymbol": "f839142e-5cc3-42f2-8f8f-03a7c9e52887",
+			"targetSymbol": "c70603d3-3097-4658-b334-38a8358d4991",
 			"object": "86fd05ec-18d8-425c-bbf3-70aadf993806"
 		},
 		"edc55d59-feb6-4be5-a1e6-8fa85a454045": {
@@ -549,36 +490,6 @@
 			"sourceSymbol": "01f5c6b6-249f-4726-91ed-2307d2323aed",
 			"targetSymbol": "fce5ea91-dbff-41f2-b7e2-0aeacc77aa63",
 			"object": "a8b03abe-f2b3-4b30-bac6-91b4791c3ce8"
-		},
-		"2f1b427f-bba8-4a85-b1f1-adf8d082ea5c": {
-			"classDefinition": "com.sap.bpm.wfs.ui.ServiceTaskSymbol",
-			"x": 177.9999976158142,
-			"y": -248,
-			"width": 100,
-			"height": 60,
-			"object": "ef91a235-aa2c-42f8-9b1a-c3799343ac52"
-		},
-		"35f975cb-9034-4ac5-a1ad-d3d2a250ad70": {
-			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "277.9999976158142,-219 344.9999964237213,-219",
-			"sourceSymbol": "2f1b427f-bba8-4a85-b1f1-adf8d082ea5c",
-			"targetSymbol": "c70603d3-3097-4658-b334-38a8358d4991",
-			"object": "8cde9675-e8ac-4379-92f3-5cc90bca0e11"
-		},
-		"f839142e-5cc3-42f2-8f8f-03a7c9e52887": {
-			"classDefinition": "com.sap.bpm.wfs.ui.UserTaskSymbol",
-			"x": 13.999998807907104,
-			"y": -247.50000059604645,
-			"width": 100,
-			"height": 60,
-			"object": "2b0a62dc-4b45-4b63-a97b-2f860bcce996"
-		},
-		"e220eb26-ae8b-4058-86c8-2e45ac5344e2": {
-			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "113.9999988079071,-217.75000029802322 177.9999976158142,-217.75000029802322",
-			"sourceSymbol": "f839142e-5cc3-42f2-8f8f-03a7c9e52887",
-			"targetSymbol": "2f1b427f-bba8-4a85-b1f1-adf8d082ea5c",
-			"object": "1ca6abcf-349c-4e32-9222-1a6375bd4a8b"
 		},
 		"139aeb6b-9a41-45f4-a73c-132c3bd9dfc3": {
 			"classDefinition": "com.sap.bpm.wfs.ui.ScriptTaskSymbol",

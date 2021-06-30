@@ -20,6 +20,35 @@
                     "constraints": {
                         "required": false
                     }
+                },
+                {
+                    "id": "Company_Code",
+                    "type": "string",
+                    "label": "Country",
+                    "readOnly": false,
+                    "value": "${context.response.country}",
+                    "control": {
+                        "type": "Dropdown",
+                        "properties": {
+                            "items": [
+                                {
+                                    "value": "ACE_USA",
+                                    "displayValue": "\"ACE_USA\""
+                                },
+                                {
+                                    "value": "ACE_IND",
+                                    "displayValue": "\"ACE_IND\""
+                                }
+                            ]
+                        }
+                    },
+                    "constraints": {
+                        "required": true,
+                        "enum": [
+                            "ACE_USA",
+                            "ACE_IND"
+                        ]
+                    }
                 }
             ]
         }
