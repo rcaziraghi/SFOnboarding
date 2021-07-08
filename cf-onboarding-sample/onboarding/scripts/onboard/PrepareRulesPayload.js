@@ -5,7 +5,7 @@
   //$.context.empData = empData
  
     var employee = {};
-     employee.countryOfCompany = empData.workCountry;
+     employee.countryOfCompany = $.context.response.countryCode;
      employee.company = $.context.response.country;
      employee.jobDepartment = empData.department;
     

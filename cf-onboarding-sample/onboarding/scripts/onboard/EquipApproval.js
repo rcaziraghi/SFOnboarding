@@ -17,8 +17,10 @@
 
 
    var Vocabulary = [{
-  	 "TotalAmount": total
-    }];
+  	       "TotalEquipmentAmount": {
+                "TotalAmount": total
+    }
+   }];
     var rulesPayloadtotal = {
     	"RuleServiceId": "d6cd271f8a874c178c2a70131f9441e4",
     	//"RuleServiceVersion": "000002000007000000",
