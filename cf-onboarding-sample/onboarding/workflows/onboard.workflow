@@ -309,7 +309,11 @@
 		},
 		"d4570f25-175a-41ce-80fa-a765bf67da3a": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
+<<<<<<< HEAD
 			"condition": "${context.response.equipApprove.Result[0].EquipmentApproval.ApprovalNeeded==\"true\"}",
+=======
+			"condition": "${context.response.equipApprove.Result[0].EquipmentApproval.ApprovalNeeded==true}",
+>>>>>>> 9f26e610382709de1c0f968948ea35e448e5053e
 			"id": "sequenceflow71",
 			"name": "Need Approve",
 			"sourceRef": "926258aa-2186-4aba-a443-7174c5861e96",
