@@ -1,8 +1,9 @@
-    var empData = $.context.CInfo.d.results[0];
+    //var empData = $.context.CInfo.d.department;
+    var empData = $.context.CInfo.d;
     var empCompany = $.context.response.country;
   /************ Prepare Input Payload to Execute Rules ****************/
-
-  //$.context.empData = empData
+    //$.context.UserInfo = empData
+ 
  
     var employee = {};
      employee.countryOfCompany = $.context.response.countryCode;

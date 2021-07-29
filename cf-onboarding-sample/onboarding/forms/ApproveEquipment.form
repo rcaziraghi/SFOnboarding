@@ -16,7 +16,7 @@
                     "type": "string",
                     "label": "First Name",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].fName}",
+                    "value": "${context.CInfo.d.firstName}",
                     "constraints": {
                         "required": false
                     }
@@ -26,7 +26,7 @@
                     "type": "string",
                     "label": "Last Name",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].lName}",
+                    "value": "${context.CInfo.d.lastName}",
                     "constraints": {
                         "required": false
                     }
@@ -43,7 +43,7 @@
                     "type": "string",
                     "label": "Location",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].location}",
+                    "value": "${context.CInfo.d.location}",
                     "constraints": {
                         "required": false
                     }
@@ -53,7 +53,7 @@
                     "type": "string",
                     "label": "Division",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].division}",
+                    "value": "${context.CInfo.d.division}",
                     "constraints": {
                         "required": false
                     }
@@ -63,7 +63,7 @@
                     "type": "string",
                     "label": "Department",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].department}",
+                    "value": "${context.CInfo.d.department}",
                     "constraints": {
                         "required": false
                     }

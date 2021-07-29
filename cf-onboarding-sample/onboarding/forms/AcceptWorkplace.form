@@ -16,7 +16,7 @@
                     "type": "string",
                     "label": "First Name",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].fName}",
+                    "value": "${context.CInfo.d.firstName}",
                     "constraints": {
                         "required": false
                     }
@@ -26,44 +26,7 @@
                     "type": "string",
                     "label": "Last Name",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].lName}",
-                    "constraints": {
-                        "required": false
-                    }
-                }
-            ]
-        },
-        {
-            "id": "job_information",
-            "type": "section",
-            "title": "HR Info",
-            "content": [
-                {
-                    "id": "manager_id",
-                    "type": "string",
-                    "label": "Manager ID",
-                    "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].managerId}",
-                    "constraints": {
-                        "required": false
-                    }
-                },
-                {
-                    "id": "hr_manager_id",
-                    "type": "string",
-                    "label": "HR Manager ID",
-                    "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].hrManagerId}",
-                    "constraints": {
-                        "required": false
-                    }
-                },
-                {
-                    "id": "job_req_id",
-                    "type": "string",
-                    "label": "Job Req ID",
-                    "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].jobReqId}",
+                    "value": "${context.CInfo.d.lastName}",
                     "constraints": {
                         "required": false
                     }
@@ -80,7 +43,7 @@
                     "type": "string",
                     "label": "Division",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].division}",
+                    "value": "${context.CInfo.d.division}",
                     "constraints": {
                         "required": false
                     }
@@ -90,7 +53,7 @@
                     "type": "string",
                     "label": "Department",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].department}",
+                    "value": "${context.CInfo.d.department}",
                     "constraints": {
                         "required": false
                     }
@@ -100,7 +63,7 @@
                     "type": "string",
                     "label": "Location",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].location}",
+                    "value": "${context.CInfo.d.location}",
                     "constraints": {
                         "required": false
                     }
@@ -110,7 +73,7 @@
                     "type": "string",
                     "label": "Country",
                     "readOnly": true,
-                    "value": "${context.CInfo.d.results[0].workCountry}",
+                    "value": "${context.CInfo.d.country}",
                     "constraints": {
                         "required": false
                     }

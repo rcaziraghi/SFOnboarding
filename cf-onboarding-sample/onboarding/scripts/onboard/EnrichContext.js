@@ -1,5 +1,5 @@
   var EquipmentInfo = $.context.equipment.EquipmentsInfo.Result[0].EquipmentList;
-  var empData = $.context.CInfo.d.results[0];
+  var empData = $.context.CInfo.d;
   var EquipInfo = [];
   var equip = {};
   if (EquipmentInfo.length > 0) {
