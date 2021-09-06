@@ -115,7 +115,7 @@
                         },
                         {
                             "id": "price",
-                            "type": "string",
+                            "type": "float",
                             "label": "Price",
                             "readOnly": false,
                             "value": "${item.Price}",

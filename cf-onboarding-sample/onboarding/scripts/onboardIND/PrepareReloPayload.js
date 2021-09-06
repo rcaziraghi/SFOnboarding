@@ -31,7 +31,7 @@ var employeeRelo = {};
 
 employeeRelo.countryOfCompany = $.context.response.countryCode;
 employeeRelo.company = $.context.response.country;
-employeeRelo.jobDepartment = empData.jobDepartment;
+employeeRelo.jobDepartment = empData.department;
 
 var VocabularyReloEmp = [{
     "Employee": employeeRelo
